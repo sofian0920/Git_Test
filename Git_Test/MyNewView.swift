@@ -9,13 +9,13 @@ import SwiftUI
 
 struct MyNewView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("This is test")
+        ZStack{
+            
+            Color.red.ignoresSafeArea(.all)
+            Text("Hello World")
+                .padding()
         }
-        .padding()
+           
     }
 }
 
