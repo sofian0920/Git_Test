@@ -25,6 +25,11 @@ struct SignInView: View {
                     .foregroundColor(Color.white)
                     .padding()
                 
+                Button("Sign In", action: {})
+                    .frame(width: 343, height: 48)
+                    .background(Color.buttonColor)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
             }
         }
            
