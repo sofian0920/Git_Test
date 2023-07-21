@@ -27,14 +27,16 @@ struct SignInView: View {
 
 struct CustomTextField: View {
     @State var token = ""
+    @FocusState private var isFocused: Bool
     var body: some View {
         TextField("", text: $token, prompt: Text("Personal access token").foregroundColor(.gray))
             .padding(10)
             .frame(width: 343, height: 48)
+            .focused($isFocused)
             .background(Color.black)
             .overlay(
                     RoundedRectangle(cornerRadius: 5)
-                        .stroke(.gray )
+                        .stroke( isFocused ? Color.blue : Color.gray, lineWidth: 2)
                 )
             .foregroundColor(.white)
     }
