@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct SignInView: View {
-    @State var token = ""
-    @FocusState private var editing
     var body: some View {
         ZStack{
             Color.black.ignoresSafeArea(.all)
@@ -18,17 +16,8 @@ struct SignInView: View {
                     .resizable()
                     .frame(width: 96, height: 96)
                     .padding(45)
-                TextField(
-                         "",
-                         text: $token,
-                         prompt: Text("Personal access token")
-                            .foregroundColor(.gray)
-                     )
-                     .frame(width: 343, height: 37)
-                     .textFieldStyle(BorderedStyle(focused: editing))
-                     .focused($editing)
-                     .multilineTextAlignment(.leading)
-                     .keyboardType(.numberPad)
+                CustomTextField()
+                
                    }
                     
             }
@@ -36,23 +25,25 @@ struct SignInView: View {
         
     }
 
-struct BorderedStyle: TextFieldStyle {
-  var focused: Bool
-
-  func _body(configuration: TextField<Self._Label>) -> some View {
-      configuration
-      .padding(10)
-      .background(
-          Rectangle()
-              .stroke(
-                  focused ? Color.red : Color.gray, lineWidth: 2
-              )
-      )
-      .cornerRadius(8)
-  }}
+struct CustomTextField: View {
+    @State var token = ""
+    var body: some View {
+        TextField("", text: $token, prompt: Text("Personal access token").foregroundColor(.gray))
+            .padding(10)
+            .frame(width: 343, height: 48)
+            .background(Color.black)
+            .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(.gray )
+                )
+            .foregroundColor(.white)
+    }
+    
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         SignInView()
+        CustomTextField()
     }
 }
