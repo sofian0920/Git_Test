@@ -11,7 +11,7 @@ struct SignInView: View {
     @State var token = ""
     var body: some View {
         ZStack{
-            Color.black.ignoresSafeArea(.all)
+            Color.mainThim.ignoresSafeArea(.all)
             VStack{
                 Image("logo")
                     .resizable()
