@@ -10,7 +10,7 @@ import SwiftUI
 struct SignInView: View {
     var body: some View {
         ZStack{
-            Color.black.ignoresSafeArea(.all)
+            Color.mainThim.ignoresSafeArea(.all)
             VStack{
                 Image("logo")
                     .resizable()
@@ -18,8 +18,12 @@ struct SignInView: View {
                     .padding(45)
                 CustomTextField()
                 
-                   }
-                    
+
+                Button("Sign In", action: {})
+                    .frame(width: 343, height: 48)
+                    .background(Color.buttonColor)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
             }
         }
         
