@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SignInView: View {
-    @State var token = ""
     var body: some View {
         ZStack{
             Color.mainThim.ignoresSafeArea(.all)
@@ -17,13 +16,7 @@ struct SignInView: View {
                     .resizable()
                     .frame(width: 96, height: 96)
                     .padding(45)
-                TextField("Personal access token", text: $token)
-                    .textContentType(.password)
-                    .background(Color.black)
-                    .textFieldStyle(.roundedBorder)
-                    .frame(width: 343, height: 48)
-                    .foregroundColor(Color.white)
-                    .padding()
+                CustomTextField()
                 
                 Button("Sign In", action: {})
                     .frame(width: 343, height: 48)
@@ -32,12 +25,30 @@ struct SignInView: View {
                     .cornerRadius(8)
             }
         }
-           
+        
     }
+
+struct CustomTextField: View {
+    @State var token = ""
+    @FocusState private var isFocused: Bool
+    var body: some View {
+        TextField("", text: $token, prompt: Text("Personal access token").foregroundColor(.gray))
+            .padding(10)
+            .frame(width: 343, height: 48)
+            .focused($isFocused)
+            .background(Color.black)
+            .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke( isFocused ? Color.blue : Color.gray, lineWidth: 2)
+                )
+            .foregroundColor(.white)
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         SignInView()
+        CustomTextField()
     }
 }
