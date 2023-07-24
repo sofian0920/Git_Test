@@ -28,28 +28,28 @@ struct SignInView: View {
         }
         
     }
-
-struct CustomTextField: View {
-    @State var token = ""
-    @FocusState private var isFocused: Bool
-    var body: some View {
-        TextField("", text: $token, prompt: Text("Personal access token").foregroundColor(.gray))
-            .padding(10)
-            .frame(width: 343, height: 48)
-            .focused($isFocused)
-            .background(Color.black)
-            .overlay(
+    
+    struct CustomTextField: View {
+        @State var token = ""
+        @FocusState private var isFocused: Bool
+        var body: some View {
+            TextField("", text: $token, prompt: Text("Personal access token").foregroundColor(.gray))
+                .padding(10)
+                .frame(width: 343, height: 48)
+                .focused($isFocused)
+                .background(Color.mainThim)
+                .overlay(
                     RoundedRectangle(cornerRadius: 5)
                         .stroke( isFocused ? Color.blue : Color.gray, lineWidth: 2)
                 )
-            .foregroundColor(.white)
+                .foregroundColor(.white)
+        }
+        
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         SignInView()
-        CustomTextField()
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC4092E52A66E3A200B182F5 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4092E42A66E3A200B182F5 /* SecondView.swift */; };
+		AC57AC0C2A6E77E500760A87 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57AC0B2A6E77E500760A87 /* SplashScreenView.swift */; };
 		AC61FA592A653F2F003D544A /* Git_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61FA582A653F2F003D544A /* Git_TestApp.swift */; };
 		AC61FA5B2A653F2F003D544A /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61FA5A2A653F2F003D544A /* SignInView.swift */; };
 		AC61FA5D2A653F30003D544A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC61FA5C2A653F30003D544A /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		AC4092E42A66E3A200B182F5 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		AC57AC0B2A6E77E500760A87 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		AC61FA552A653F2F003D544A /* Git_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Git_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC61FA582A653F2F003D544A /* Git_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Git_TestApp.swift; sourceTree = "<group>"; };
 		AC61FA5A2A653F2F003D544A /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				AC61FA5A2A653F2F003D544A /* SignInView.swift */,
 				ACC145652A697D86002A5CFB /* Color.swift */,
 				AC4092E42A66E3A200B182F5 /* SecondView.swift */,
+				AC57AC0B2A6E77E500760A87 /* SplashScreenView.swift */,
 				AC61FA5C2A653F30003D544A /* Assets.xcassets */,
 				AC61FA5E2A653F30003D544A /* Preview Content */,
 			);
@@ -145,6 +148,8 @@
 			files = (
 				AC4092E52A66E3A200B182F5 /* SecondView.swift in Sources */,
 				ACC145662A697D86002A5CFB /* Color.swift in Sources */,
+
+				AC57AC0C2A6E77E500760A87 /* SplashScreenView.swift in Sources */,
 				AC61FA5B2A653F2F003D544A /* SignInView.swift in Sources */,
 				AC61FA592A653F2F003D544A /* Git_TestApp.swift in Sources */,
 			);
