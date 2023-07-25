@@ -10,20 +10,24 @@ import SwiftUI
 struct RepositoriesView: View {
     var cells: [CellModel]
     var body: some View {
-        ZStack{
-            Color.mainThim.ignoresSafeArea(.all)
-            ScrollView{
-                VStack{
-                    TableCellView(model: cells[0])
-                    TableCellView(model: cells[1])
-                    TableCellView(model: cells[2])
-                    TableCellView(model: cells[1])
-                    TableCellView(model: cells[2])
-                    TableCellView(model: cells[1])
-                    TableCellView(model: cells[2])
-                    
+        NavigationStack{
+            ZStack{
+                Color.mainThim.ignoresSafeArea(.all)
+                ScrollView{
+                    VStack{
+                        TableCellView(model: cells[0])
+                        TableCellView(model: cells[1])
+                        TableCellView(model: cells[2])
+                        TableCellView(model: cells[1])
+                        TableCellView(model: cells[2])
+                        TableCellView(model: cells[1])
+                        TableCellView(model: cells[2])
+                        
+                    }
                 }
-            }
+            }.navigationTitle("Repositories")
+            .navigationBarTitleDisplayMode(.inline)
+            
         }
     }
 }
