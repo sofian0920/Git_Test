@@ -18,7 +18,10 @@ struct SignInView: View {
                     .frame(width: 96, height: 96)
                     .padding(45)
                 CustomTextField()
-                   Spacer()
+
+                
+
+
                 Button("Sign In", action: {})
                     .frame(width: 343, height: 48)
                     .background(Color.buttonColor)

@@ -154,6 +154,7 @@
 			files = (
 				AC4092E52A66E3A200B182F5 /* RepositoriesView.swift in Sources */,
 				ACC145662A697D86002A5CFB /* Color.swift in Sources */,
+
 				AC57AC0C2A6E77E500760A87 /* SplashScreenView.swift in Sources */,
 				AC57AC102A6EA28A00760A87 /* TableCellView.swift in Sources */,
 				AC61FA5B2A653F2F003D544A /* SignInView.swift in Sources */,
