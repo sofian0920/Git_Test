@@ -12,12 +12,15 @@ struct SignInView: View {
         ZStack{
             Color.mainThim.ignoresSafeArea(.all)
             VStack{
+                Spacer()
                 Image("logo")
                     .resizable()
                     .frame(width: 96, height: 96)
                     .padding(45)
                 CustomTextField()
+
                 
+
 
                 Button("Sign In", action: {})
                     .frame(width: 343, height: 48)
