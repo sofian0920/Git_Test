@@ -16,6 +16,7 @@
 		AC61FA5D2A653F30003D544A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC61FA5C2A653F30003D544A /* Assets.xcassets */; };
 		AC61FA602A653F30003D544A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC61FA5F2A653F30003D544A /* Preview Assets.xcassets */; };
 		ACC145662A697D86002A5CFB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC145652A697D86002A5CFB /* Color.swift */; };
+		ACE19F1A2A701744005DDFFA /* FullInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE19F192A701744005DDFFA /* FullInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		AC61FA5C2A653F30003D544A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC61FA5F2A653F30003D544A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACC145652A697D86002A5CFB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		ACE19F192A701744005DDFFA /* FullInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,9 @@
 				AC61FA582A653F2F003D544A /* Git_TestApp.swift */,
 				AC57AC0B2A6E77E500760A87 /* SplashScreenView.swift */,
 				AC61FA5A2A653F2F003D544A /* SignInView.swift */,
+
+				ACE19F192A701744005DDFFA /* FullInfoView.swift */,
+
 				AC57AC0D2A6EA0EF00760A87 /* CellModel.swift */,
 				AC57AC0F2A6EA28A00760A87 /* TableCellView.swift */,
 				ACC145652A697D86002A5CFB /* Color.swift */,
@@ -160,6 +165,9 @@
 				AC61FA5B2A653F2F003D544A /* SignInView.swift in Sources */,
 				AC61FA592A653F2F003D544A /* Git_TestApp.swift in Sources */,
 				AC57AC0E2A6EA0EF00760A87 /* CellModel.swift in Sources */,
+
+				ACE19F1A2A701744005DDFFA /* FullInfoView.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

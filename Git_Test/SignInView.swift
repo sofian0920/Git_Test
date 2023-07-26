@@ -19,7 +19,10 @@ struct SignInView: View {
                     .padding(45)
                 CustomTextField()
 
-                
+
+                   Spacer()
+
+
 
 
                 Button("Sign In", action: {})
