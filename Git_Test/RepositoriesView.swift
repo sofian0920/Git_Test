@@ -39,7 +39,7 @@ struct RepositoriesView_Previews: PreviewProvider {
 }
 
 private var feed: [CellModel] = [
-    .init(nameRepo: "moko-web3", language: " Kotlin", description: "Ethereum Web3 implementation for mobile (android & ios) Kotlin Multiplatform development"),
-    .init(nameRepo: "moko-resources", language: "Kotlin", description: "Resources access for mobile (android & ios) Kotlin Multiplatform development"),
-    .init(nameRepo: "libs.kmp.icerock.dev", language: "JavaScript", description: " Kotlin Multiplatform libraries list with info auto-fetch")
+    .init(nameRepo: "moko-web3", language: " Kotlin", description: "Ethereum Web3 implementation for mobile (android & ios) Kotlin Multiplatform development", countOfStars: 24, forks: 13, watchers: 3),
+    .init(nameRepo: "moko-resources", language: "Kotlin", description: "Resources access for mobile (android & ios) Kotlin Multiplatform development", countOfStars: 24, forks: 13, watchers: 3),
+    .init(nameRepo: "libs.kmp.icerock.dev", language: "JavaScript", description: " Kotlin Multiplatform libraries list with info auto-fetch", countOfStars: 24, forks: 13, watchers: 3)
 ]

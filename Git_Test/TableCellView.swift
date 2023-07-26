@@ -35,7 +35,10 @@ struct TableCellView_Previews: PreviewProvider {
         TableCellView(model: CellModel(
                        nameRepo: "new_repo",
                        language: "JavaScript",
-                       description: "Ethereum Web3 implementation for mobile (android & ios) Kotlin Multiplatform development")
+                       description: "Ethereum Web3 implementation for mobile (android & ios) Kotlin Multiplatform development",
+                       countOfStars: 24, forks: 10,
+                      watchers: 3
                       )
+                    )
     }
 }

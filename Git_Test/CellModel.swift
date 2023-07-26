@@ -11,4 +11,7 @@ struct CellModel {
     var nameRepo: String
     var language: String
     var description: String
+    var countOfStars: Int
+    var forks: Int
+    var watchers: Int 
 }

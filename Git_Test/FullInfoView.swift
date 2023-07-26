@@ -13,8 +13,22 @@ struct FullInfoView: View {
         ZStack{
             Color.mainThim.ignoresSafeArea(.all)
             VStack{
-                
+                Text("Some link")
+                HStack{
+                    Text("License")
+                    Spacer()
+                    Text("Apsrche-20")
+                }
+                HStack{
+                    Text("stars")
+                    Spacer()
+                    Text("forks")
+                    Spacer()
+                    Text("watchers")
+                    
+                }
             }
+            .foregroundColor(.white)
         }
     }
 }
