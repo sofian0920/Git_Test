@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FullInfoView: View {
+    var model: CellModel
     
     var body: some View {
         ZStack{
@@ -17,14 +18,18 @@ struct FullInfoView: View {
                 HStack{
                     Text("License")
                     Spacer()
-                    Text("Apsrche-20")
+                    Text("Apsrche-20 ")
                 }
                 HStack{
-                    Text("stars")
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
+                    Text("stars \(model.countOfStars)")
                     Spacer()
-                    Text("forks")
+                    Text("forks \(model.forks)")
                     Spacer()
-                    Text("watchers")
+                    Image(systemName: "eye.fill")
+                        .foregroundColor(.blue)
+                    Text("\(model.watchers) watchers")
                     
                 }
             }
@@ -35,6 +40,9 @@ struct FullInfoView: View {
 
 struct FullInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        FullInfoView()
+        FullInfoView(model: CellModel(nameRepo: "new_repo", language: "JavaScript",
+            description: "Ethereum Web3 implementation for mobile (android & ios) Kotlin Multiplatform development",
+                                      countOfStars: 24, forks: 10,
+                                     watchers: 3))
     }
 }
