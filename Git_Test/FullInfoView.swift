@@ -11,29 +11,33 @@ struct FullInfoView: View {
     var model: CellModel
     
     var body: some View {
-        ZStack{
-            Color.mainThim.ignoresSafeArea(.all)
-            VStack{
-                Text("Some link")
-                HStack{
-                    Text("License")
-                    Spacer()
-                    Text("Apsrche-20 ")
+        NavigationStack{
+            ZStack{
+                Color.mainThim.ignoresSafeArea(.all)
+                VStack{
+                    Text("Some link")
+                    HStack{
+                        Text("License")
+                        Spacer()
+                        Text("Apsrche-20 ")
+                    }
+                    HStack{
+                        Image(systemName: "star.fill")
+                            .foregroundColor(.yellow)
+                        Text("\(model.countOfStars) stars")
+                        Spacer()
+                        Text("\(model.forks) forks")
+                        Spacer()
+                        Image(systemName: "eye.fill")
+                            .foregroundColor(.blue)
+                        Text("\(model.watchers) watchers")
+                        
+                    }
+                    Text(model.description)
                 }
-                HStack{
-                    Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
-                    Text("stars \(model.countOfStars)")
-                    Spacer()
-                    Text("forks \(model.forks)")
-                    Spacer()
-                    Image(systemName: "eye.fill")
-                        .foregroundColor(.blue)
-                    Text("\(model.watchers) watchers")
-                    
-                }
+                .foregroundColor(.white)
             }
-            .foregroundColor(.white)
+            .navigationTitle(model.nameRepo)
         }
     }
 }
