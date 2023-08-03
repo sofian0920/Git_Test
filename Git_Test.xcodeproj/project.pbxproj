@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC399E7B2A7BEFE900A243BF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AC399E7A2A7BEFE900A243BF /* Alamofire */; };
 		AC4092E52A66E3A200B182F5 /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4092E42A66E3A200B182F5 /* RepositoriesView.swift */; };
 		AC57AC0C2A6E77E500760A87 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57AC0B2A6E77E500760A87 /* SplashScreenView.swift */; };
 		AC57AC0E2A6EA0EF00760A87 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57AC0D2A6EA0EF00760A87 /* CellModel.swift */; };
@@ -38,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC399E7B2A7BEFE900A243BF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,9 +68,7 @@
 				AC61FA582A653F2F003D544A /* Git_TestApp.swift */,
 				AC57AC0B2A6E77E500760A87 /* SplashScreenView.swift */,
 				AC61FA5A2A653F2F003D544A /* SignInView.swift */,
-
 				ACE19F192A701744005DDFFA /* FullInfoView.swift */,
-
 				AC57AC0D2A6EA0EF00760A87 /* CellModel.swift */,
 				AC57AC0F2A6EA28A00760A87 /* TableCellView.swift */,
 				ACC145652A697D86002A5CFB /* Color.swift */,
@@ -103,6 +103,9 @@
 			dependencies = (
 			);
 			name = Git_Test;
+			packageProductDependencies = (
+				AC399E7A2A7BEFE900A243BF /* Alamofire */,
+			);
 			productName = Git_Test;
 			productReference = AC61FA552A653F2F003D544A /* Git_Test.app */;
 			productType = "com.apple.product-type.application";
@@ -131,6 +134,9 @@
 				Base,
 			);
 			mainGroup = AC61FA4C2A653F2F003D544A;
+			packageReferences = (
+				AC399E792A7BEFE900A243BF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = AC61FA562A653F2F003D544A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,15 +165,12 @@
 			files = (
 				AC4092E52A66E3A200B182F5 /* RepositoriesView.swift in Sources */,
 				ACC145662A697D86002A5CFB /* Color.swift in Sources */,
-
 				AC57AC0C2A6E77E500760A87 /* SplashScreenView.swift in Sources */,
 				AC57AC102A6EA28A00760A87 /* TableCellView.swift in Sources */,
 				AC61FA5B2A653F2F003D544A /* SignInView.swift in Sources */,
 				AC61FA592A653F2F003D544A /* Git_TestApp.swift in Sources */,
 				AC57AC0E2A6EA0EF00760A87 /* CellModel.swift in Sources */,
-
 				ACE19F1A2A701744005DDFFA /* FullInfoView.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC399E792A7BEFE900A243BF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC399E7A2A7BEFE900A243BF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC399E792A7BEFE900A243BF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC61FA4D2A653F2F003D544A /* Project object */;
 }
