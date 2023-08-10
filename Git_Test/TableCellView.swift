@@ -10,8 +10,7 @@ import SwiftUI
 struct TableCellView: View {
     var model: CellModel
     
-    @StateObject private var viewModel = RepositoryListViewModel()
-    
+
     var body: some View {
             ZStack {
                 Color.mainThim.ignoresSafeArea(.all)
