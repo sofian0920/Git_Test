@@ -10,23 +10,25 @@ import SwiftUI
 struct TableCellView: View {
     var model: CellModel
     
+    @StateObject private var viewModel = RepositoryListViewModel()
+    
     var body: some View {
-        ZStack {
-            Color.mainThim.ignoresSafeArea(.all)
-            VStack(alignment: .leading){
-                HStack{
-                    Text(model.nameRepo)
-                        .foregroundColor(.blue)
-                    Spacer()
-                    Text(model.language)
-                        .foregroundColor(.orange)
+            ZStack {
+                Color.mainThim.ignoresSafeArea(.all)
+                VStack(alignment: .leading){
+                    HStack{
+                        Text(model.nameRepo)
+                            .foregroundColor(.blue)
+                        Spacer()
+                        Text(model.language)
+                            .foregroundColor(.orange)
+                    }
+                    .padding(3)
+                    Text(model.description)
+                        .foregroundColor(.white)
                 }
-                .padding(3)
-                Text(model.description)
-                    .foregroundColor(.white)
+                .padding(15)
             }
-            .padding(15)
-        }
     }
 }
 

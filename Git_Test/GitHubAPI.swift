@@ -9,30 +9,34 @@ import Foundation
 import Alamofire
 
 
-struct GitHubAPI {
-    static let accessToken =  "YOUR_ACCESS_TOKEN"
-    static let baseURL = "https://api.github.com"
-}
-
-
-func getRepositories(complition: @escaping([Repository]?) -> Void) -> Void {
-    let headers: HTTPHeaders = ["Authorization" : "token \(GitHubAPI.accessToken)"]
+class GitHubNetworkManager{
+    static var shared = GitHubNetworkManager()
+    private let baseURL = "https://api.github.com"
     
-    AF.request("\(GitHubAPI.baseURL)/user/repos", headers: headers)
-        .responseDecodable(of: [Repository].self) { response in
-            switch response.result {
-            case .success(let repositories):
-                complition(repositories)
-            case .failure(let error):
-                print("Error: \(error)")
-                complition(nil)
+    private init () {}
+    
+    
+    func getRepositories(accessToken: String, completion: @escaping ([Repository]?, Error?) -> Void ){
+        let headers: HTTPHeaders = [ "Authorization": "token \(accessToken)"]
+        
+        AF.request("\(baseURL)/user/repos", headers: headers)
+            .validate()
+            .responseDecodable(of: [Repository].self) {response in
+                switch response.result {
+                case .success(let repositories):
+                    completion(repositories, nil)
+                case .failure(let error):
+                    completion(nil, error)
+                }
             }
-        }
+    }
 }
 
 
-struct Repository: Decodable, Identifiable {
-    let id: Int
+
+
+struct Repository: Codable {
+    var id: Int
     var name: String
-    let description: String?
+    var description: String?
 }

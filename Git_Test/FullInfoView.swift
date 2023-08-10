@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FullInfoView: View {
     var model: CellModel
-    @State private var repositories = [Repository]()
+   
     
     var body: some View {
         NavigationStack{

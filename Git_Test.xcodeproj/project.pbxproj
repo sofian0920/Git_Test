@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC2658F52A81399C0060CF16 /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2658F42A81399C0060CF16 /* RepositoryListViewModel.swift */; };
 		AC399E7B2A7BEFE900A243BF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AC399E7A2A7BEFE900A243BF /* Alamofire */; };
 		AC399E7D2A7BF0BE00A243BF /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC399E7C2A7BF0BE00A243BF /* GitHubAPI.swift */; };
 		AC4092E52A66E3A200B182F5 /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4092E42A66E3A200B182F5 /* RepositoriesView.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC2658F42A81399C0060CF16 /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
 		AC399E7C2A7BF0BE00A243BF /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		AC4092E42A66E3A200B182F5 /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
 		AC57AC0B2A6E77E500760A87 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				ACE19F192A701744005DDFFA /* FullInfoView.swift */,
 				AC57AC0D2A6EA0EF00760A87 /* CellModel.swift */,
 				AC399E7C2A7BF0BE00A243BF /* GitHubAPI.swift */,
+				AC2658F42A81399C0060CF16 /* RepositoryListViewModel.swift */,
 				AC57AC0F2A6EA28A00760A87 /* TableCellView.swift */,
 				ACC145652A697D86002A5CFB /* Color.swift */,
 				AC4092E42A66E3A200B182F5 /* RepositoriesView.swift */,
@@ -170,6 +173,7 @@
 				AC399E7D2A7BF0BE00A243BF /* GitHubAPI.swift in Sources */,
 				ACC145662A697D86002A5CFB /* Color.swift in Sources */,
 				AC57AC0C2A6E77E500760A87 /* SplashScreenView.swift in Sources */,
+				AC2658F52A81399C0060CF16 /* RepositoryListViewModel.swift in Sources */,
 				AC57AC102A6EA28A00760A87 /* TableCellView.swift in Sources */,
 				AC61FA5B2A653F2F003D544A /* SignInView.swift in Sources */,
 				AC61FA592A653F2F003D544A /* Git_TestApp.swift in Sources */,
