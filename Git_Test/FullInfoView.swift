@@ -45,7 +45,7 @@ struct FullInfoView: View {
 
 struct FullInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        FullInfoView(model: CellModel(nameRepo: "new_repo", language: "JavaScript",
+        FullInfoView(model: CellModel(id: 12, nameRepo: "new_repo", language: "JavaScript",
             description: "Ethereum Web3 implementation for mobile (android & ios) Kotlin Multiplatform development",
                                       countOfStars: 24, forks: 10,
                                      watchers: 3))

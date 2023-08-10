@@ -10,8 +10,7 @@ import SwiftUI
 struct TableCellView: View {
     var model: CellModel
     
-    @StateObject private var viewModel = RepositoryListViewModel()
-    
+
     var body: some View {
             ZStack {
                 Color.mainThim.ignoresSafeArea(.all)
@@ -35,6 +34,7 @@ struct TableCellView: View {
 struct TableCellView_Previews: PreviewProvider {
     static var previews: some View {
         TableCellView(model: CellModel(
+            id: 12,
                        nameRepo: "new_repo",
                        language: "JavaScript",
                        description: "Ethereum Web3 implementation for mobile (android & ios) Kotlin Multiplatform development",
