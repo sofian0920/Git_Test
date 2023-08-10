@@ -7,7 +7,8 @@
 
 import UIKit
 
-struct CellModel {
+struct CellModel: Identifiable, Codable{
+    var id: Int
     var nameRepo: String
     var language: String
     var description: String

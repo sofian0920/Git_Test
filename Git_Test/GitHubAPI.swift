@@ -9,30 +9,31 @@ import Foundation
 import Alamofire
 
 
-struct GitHubAPI {
-    static let accessToken =  "YOUR_ACCESS_TOKEN"
-    static let baseURL = "https://api.github.com"
-}
-
-
-func getRepositories(complition: @escaping([Repository]?) -> Void) -> Void {
-    let headers: HTTPHeaders = ["Authorization" : "token \(GitHubAPI.accessToken)"]
-    
-    AF.request("\(GitHubAPI.baseURL)/user/repos", headers: headers)
-        .responseDecodable(of: [Repository].self) { response in
-            switch response.result {
-            case .success(let repositories):
-                complition(repositories)
-            case .failure(let error):
-                print("Error: \(error)")
-                complition(nil)
+class RepositoriesViewModel: ObservableObject {
+    @Published var repositories: [CellModel] = []
+ 
+    func fetchRepositories(token: String){
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
+        
+        AF.request("https://api.github.com/user/repos", headers: headers)
+            .validate()
+            .responseDecodable(of: [CellModel].self) { response in
+                switch response.result{
+                case .success(let repositories):
+                    self.repositories = repositories
+                case .failure(let error):
+                    print(error)
+                }
             }
-        }
+    }
+    
 }
 
 
-struct Repository: Decodable, Identifiable {
-    let id: Int
-    var name: String
-    let description: String?
-}
+
+
+//struct Repository: Codable, Identifiable {
+//    var id: Int
+//    var name: String
+//    var description: String?
+//}
