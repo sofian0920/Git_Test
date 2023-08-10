@@ -10,14 +10,14 @@ import Alamofire
 
 
 class RepositoriesViewModel: ObservableObject {
-    @Published var repositories: [Repository] = []
+    @Published var repositories: [CellModel] = []
  
     func fetchRepositories(token: String){
         let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
         
         AF.request("https://api.github.com/user/repos", headers: headers)
             .validate()
-            .responseDecodable(of: [Repository].self) { response in
+            .responseDecodable(of: [CellModel].self) { response in
                 switch response.result{
                 case .success(let repositories):
                     self.repositories = repositories
@@ -32,8 +32,8 @@ class RepositoriesViewModel: ObservableObject {
 
 
 
-struct Repository: Codable, Identifiable {
-    var id: Int
-    var name: String
-    var description: String?
-}
+//struct Repository: Codable, Identifiable {
+//    var id: Int
+//    var name: String
+//    var description: String?
+//}
