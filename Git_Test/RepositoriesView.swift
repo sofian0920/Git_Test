@@ -26,7 +26,7 @@ struct RepositoriesView: View {
             
         }
         .onAppear {
-            let token = ""
+            let token = "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"
             viewModel.fetchRepositories(token: token)
         }
     }

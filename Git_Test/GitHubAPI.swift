@@ -14,8 +14,9 @@ class RepositoriesViewModel: ObservableObject {
  
     func fetchRepositories(token: String){
         let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
+        let url =  "https://api.github.com/users/sofian0920/repos"
         
-        AF.request("https://api.github.com/user/repos", headers: headers)
+        AF.request(url, method: .get, headers: headers)
             .validate()
             .responseDecodable(of: [CellModel].self) { response in
                 switch response.result{
