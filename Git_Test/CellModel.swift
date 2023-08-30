@@ -9,10 +9,11 @@ import UIKit
 
 struct CellModel: Identifiable, Codable{
     var id: Int
-    var nameRepo: String
+    var name: String
     var language: String
     var description: String
     var countOfStars: Int
     var forks: Int
     var watchers: Int 
 }
+

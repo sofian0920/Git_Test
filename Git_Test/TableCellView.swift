@@ -16,7 +16,7 @@ struct TableCellView: View {
                 Color.mainThim.ignoresSafeArea(.all)
                 VStack(alignment: .leading){
                     HStack{
-                        Text(model.nameRepo)
+                        Text(model.name)
                             .foregroundColor(.blue)
                         Spacer()
                         Text(model.language)
@@ -35,7 +35,7 @@ struct TableCellView_Previews: PreviewProvider {
     static var previews: some View {
         TableCellView(model: CellModel(
             id: 12,
-                       nameRepo: "new_repo",
+                       name: "new_repo",
                        language: "JavaScript",
                        description: "Ethereum Web3 implementation for mobile (android & ios) Kotlin Multiplatform development",
                        countOfStars: 24, forks: 10,

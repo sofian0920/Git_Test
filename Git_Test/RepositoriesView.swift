@@ -10,28 +10,25 @@ import SwiftUI
 
 struct RepositoriesView: View {
     @ObservedObject var viewModel = RepositoriesViewModel()
-
     var body: some View {
-        NavigationView {
             ZStack {
                 Color.mainThim.ignoresSafeArea(.all)
                 ScrollView {
                     VStack {
-                        ForEach(viewModel.repositories) { repository in
+                        ForEach(viewModel.repositories, id: \.id) { repository in
                             TableCellView(model: repository)
                         }
                     }
                 }
             }
-            
+            .onAppear (perform: {
+                let token = "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"
+                viewModel.fetchRepositories(token: token)
+                
+            })
         }
-        .onAppear {
-            let token = "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"
-            viewModel.fetchRepositories(token: token)
-        }
-    }
+    
 }
-
 struct RepositoriesView_Previews: PreviewProvider {
     static var previews: some View {
         RepositoriesView()
